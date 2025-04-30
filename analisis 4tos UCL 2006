@@ -1,0 +1,15 @@
+import json
+ruta_del_archivo = r"C:\Users\marlo\cuartos_2006.json"
+
+with open(ruta_del_archivo, "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+total_tarjetas_rojas = 0
+for partido in data["partidos"]:
+    total_tarjetas_rojas += sum(partido["tarjetas_rojas"].values())
+
+print(f"Total de tarjetas rojas en cuartos de final: {total_tarjetas_rojas}\n")
+
+print("Equipos clasificados a semifinales:")
+for partido in data["partidos"]:
+    print(f"- {partido['clasificado']}")
