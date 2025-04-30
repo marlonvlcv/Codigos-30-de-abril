@@ -1,0 +1,65 @@
+import json
+
+data = {
+    "temporada": "2005-2006",
+    "fase": "Cuartos de final",
+    "partidos": [
+        {
+            "equipo_local": "Arsenal",
+            "equipo_visitante": "Juventus",
+            "resultados": {
+                "ida": {"local": 2, "visitante": 0},
+                "vuelta": {"local": 0, "visitante": 0}
+            },
+            "tarjetas_rojas": {
+                "Arsenal": 0,
+                "Juventus": 2
+            },
+            "clasificado": "Arsenal"
+        },
+        {
+            "equipo_local": "Benfica",
+            "equipo_visitante": "Barcelona",
+            "resultados": {
+                "ida": {"local": 0, "visitante": 0},
+                "vuelta": {"local": 0, "visitante": 2}
+            },
+            "tarjetas_rojas": {
+                "Benfica": 0,
+                "Barcelona": 0
+            },
+            "clasificado": "Barcelona"
+        },
+        {
+            "equipo_local": "Inter de Milán",
+            "equipo_visitante": "Villarreal",
+            "resultados": {
+                "ida": {"local": 2, "visitante": 1},
+                "vuelta": {"local": 0, "visitante": 1}
+            },
+            "tarjetas_rojas": {
+                "Inter de Milán": 1,
+                "Villarreal": 0
+            },
+            "clasificado": "Villarreal"
+        },
+        {
+            "equipo_local": "Lyon",
+            "equipo_visitante": "AC Milan",
+            "resultados": {
+                "ida": {"local": 0, "visitante": 0},
+                "vuelta": {"local": 1, "visitante": 3}
+            },
+            "tarjetas_rojas": {
+                "Lyon": 0,
+                "AC Milan": 0
+            },
+            "clasificado": "AC Milan"
+        }
+    ]
+}
+
+with open("cuartos_2006.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=4)
+
+print("Archivo 'cuartos_2006.json' guardado correctamente.")
